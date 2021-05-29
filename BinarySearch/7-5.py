@@ -38,29 +38,57 @@
 #     if(binary_search(data,target[i],0,len(data)-1)): print("yes",end=' ')
 #     else: print("no",end=' ')
 
-n = int(input())
+# n = int(input())
+#
+# A = list(map(int,input().split()))
+# A = A[:n]
+# A.sort()
+#
+# m = int(input())
+#
+# B = list(map(int,input().split()))
+# B = B[:m]
+#
+# def binary_search(data,target,start,end):
+#     while(start<=end):
+#         mid = (start+end) // 2
+#
+#         if data[mid] == target:
+#             return True
+#         elif data[mid] > target:
+#             end = mid-1
+#         elif data[mid] < target:
+#             start = mid+1
+#     return False
+#
+# for i in range(len(B)):
+#     if binary_search(A,B[i],0,n-1): print("yes",end=' ')
+#     else: print("no", end=' ')
 
-A = list(map(int,input().split()))
-A = A[:n]
-A.sort()
+n = int(input())
+data = list(map(int,input().split()))
+data = data[:n]
 
 m = int(input())
-
-B = list(map(int,input().split()))
-B = B[:m]
+target = list(map(int,input().split()))
+target = target[:m]
 
 def binary_search(data,target,start,end):
-    while(start<=end):
+
+    while start<=end:
         mid = (start+end) // 2
 
-        if data[mid] == target:
-            return True
-        elif data[mid] > target:
-            end = mid-1
-        elif data[mid] < target:
-            start = mid+1
+        if(data[mid] == target): return True
+
+        elif data[mid] > target: end = mid-1
+
+        elif data[mid] < target: start = mid+1
+
     return False
 
-for i in range(len(B)):
-    if binary_search(A,B[i],0,n-1): print("yes",end=' ')
-    else: print("no", end=' ')
+for i in range(m):
+    if(binary_search(data,target[i],0,n-1)):
+        print("yes",end=' ')
+    else:
+        print("no", end=' ')
+

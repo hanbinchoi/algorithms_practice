@@ -35,26 +35,53 @@
 #
 #
 # print(binary_search(data,m,0,max(data)))
+#
+# n,m = map(int,input().split())
+#
+# data = list(map(int,input().split()))
+# data = data[:n]
+#
+# def binary_search(data,target,start,end):
+#     while(start<=end):
+#         mid = (start+end) // 2
+#         result = 0
+#
+#         for i in range(len(data)):
+#             if data[i]>mid:
+#                 result += data[i]-mid
+#
+#         if result == target: return mid
+#
+#         elif result > target:
+#             start = mid+1
+#         elif result < target:
+#             end = mid-1
+#
+# print(binary_search(data,m,0,data[n-1]))
 
-n,m = map(int,input().split())
-
+n, m = map(int,input().split())
 data = list(map(int,input().split()))
 data = data[:n]
+data.sort()
 
 def binary_search(data,target,start,end):
-    while(start<=end):
-        mid = (start+end) // 2
-        result = 0
 
+    while start<=end:
+        mid = (start+end) //2
+        result = 0
         for i in range(len(data)):
-            if data[i]>mid:
+            if (data[i]-mid) > 0:
                 result += data[i]-mid
+
+        print(start, end, mid, result)
 
         if result == target: return mid
 
-        elif result > target:
-            start = mid+1
-        elif result < target:
-            end = mid-1
+        elif result > target: start=mid+1
+
+        elif result < target: end= mid-1
+
+
+    return None
 
 print(binary_search(data,m,0,data[n-1]))
