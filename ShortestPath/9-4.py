@@ -26,30 +26,52 @@
 # else:
 #     print(dist)
 #
-
-
+#
+#
+# n,m = map(int,input().split())
+# INF = int(1e9)
+# graph = [[INF]* n for _ in range(n)]
+# print(graph)
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i==j: graph[i][j] = 0
+#
+# for i in range(m):
+#     a,b = map(int,input().split())
+#     graph[a-1][b-1] = 1
+#     graph[b-1][a-1] = 1
+#
+# for i in range(n):
+#     for j in range(n):
+#         for k in range(n):
+#             graph[j][k] = min(graph[j][k], graph[j][i]+graph[i][k])
+#
+# x,k = map(int,input().split())
+#
+# dist = graph[0][k-1]+graph[k-1][x-1]
+#
+# if dist>INF: print(-1)
+# else: print(dist)
 n,m = map(int,input().split())
 INF = int(1e9)
-graph = [[INF]* n for _ in range(n)]
-print(graph)
 
-for i in range(n):
-    for j in range(n):
-        if i==j: graph[i][j] = 0
+graph = [[INF] * n for _ in range(n)]
 
 for i in range(m):
     a,b = map(int,input().split())
     graph[a-1][b-1] = 1
     graph[b-1][a-1] = 1
 
-for i in range(n):
-    for j in range(n):
-        for k in range(n):
-            graph[j][k] = min(graph[j][k], graph[j][i]+graph[i][k])
+for k in range(n):
+    for i in range(n):
+        for j in range(n):
+            graph[i][j] = min(graph[i][j],graph[i][k]+graph[k][j])
 
 x,k = map(int,input().split())
 
-dist = graph[0][k-1]+graph[k-1][x-1]
+dist= graph[0][k-1]+graph[k-1][x-1]
 
-if dist>INF: print(-1)
+if dist >= INF: print(-1)
+
 else: print(dist)
