@@ -20,4 +20,4 @@ def hanoi(num_disks, start_peg, end_peg):
 
 
 # 테스트
-hanoi(3, 1, 3)
+hanoi(2, 1, 3)
