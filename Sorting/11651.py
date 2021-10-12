@@ -3,7 +3,7 @@ pointList = []
 
 for i in range(num):
     a,b = map(int, input().split())
-    pointList.append([a,b])
+    pointList.append([b,a])
 pointList.sort()
 for i,j in pointList:
-    print(i,j)
+    print(j,i)
