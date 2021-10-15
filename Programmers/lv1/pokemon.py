@@ -1,10 +1,18 @@
 def solution(nums):
     answer = 0
-    choice = nums//2
-    if choice>= len(set(nums)):
+    choice = len(nums)//2
+    pokemonNum = {}
+    for i in set(nums):
+        pokemonNum[i] = 0
+
+    for i in nums:
+        pokemonNum[i] += 1
+
+    print(len(pokemonNum))
+    if len(pokemonNum) > choice:
         answer = choice
     else:
-        answer = len(set(nums))
+        answer = len(pokemonNum)
     return answer
 
-print(solution([3,3,3,2,2,4]))
+print(solution([3,1,2,3]))
