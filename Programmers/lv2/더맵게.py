@@ -1,22 +1,18 @@
 def solution(scoville, K):
-    answer = 0
-    scoville.sort();
+    scoville.sort()
     cnt = 0
-    while scoville:
-        if len(scoville) <= 1:
-            cnt = -1
-            break
+    while min(scoville)<K:
+        a = scoville.pop(0)
         cnt += 1
-        scovilleScore = scoville[0] + (scoville[1]*2)
-        if scovilleScore >= K:
-            break
+        if len(scoville) != 1:
+            b = scoville.pop(0)
+            new = a+(b*2)
         else:
-            scoville.append(scovilleScore)
-            scoville.pop(0)
-            scoville.pop(0)
-            scoville.sort()
-    if len(scoville) == 0:
-        cnt = -1
+            new = a + (a*2)
+        scoville.append(new)
+        scoville.sort()
+        print(scoville)
     return cnt
 
-print(solution([1,2,3],11))
+
+print(solution([1, 2, 3, 9, 10, 12], 100))
