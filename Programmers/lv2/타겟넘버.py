@@ -6,15 +6,14 @@ def solution(numbers, target):
     queue = deque()
     queue.append([numbers[0],0])
     queue.append([-1*numbers[0],0])
-    n = len(numbers)
     while queue:
         temp, idx = queue.popleft()
         idx += 1
-        if idx < n:
-            queue.append([temp+numbers[idx], idx])
-            queue.append([temp+(-1*numbers[idx]), idx])
+        if len(numbers)>idx:
+            queue.append([temp+numbers[idx],idx])
+            queue.append([temp-numbers[idx],idx])
         else:
-            if temp == target:
+            if temp==target:
                 answer+=1
     return answer
 print(solution([1, 1, 1, 1, 1],	3))
