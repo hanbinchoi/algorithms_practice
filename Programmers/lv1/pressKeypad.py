@@ -1,42 +1,54 @@
 def solution(numbers, hand):
     answer = ''
-    keypad = {
-        1: [0, 0], 2: [0, 1], 3: [0, 2],
-        4: [1, 0], 5: [1, 1], 6: [1, 2],
-        7: [2, 0], 8: [2, 1], 9: [2, 2],
-        "*": [3, 0], 0: [3, 1], "#": [3, 2],
-    }
-    left = "*"
-    right = "#"
+    lnow = 10
+    rnow = 12
+    ptDict = {
+        1: [1, 1],
+        2: [1, 2],
+        3: [1, 3],
+        4: [2, 1],
+        5: [2, 2],
+        6: [2, 3],
+        7: [3, 1],
+        8: [3, 2],
+        9: [3, 3],
+        10: [4, 1],
+        11: [4, 2],
+        12: [4, 3]
 
-    for key in numbers:
-        if key in [1, 4, 7, "*"]:
+    }
+    for i in numbers:
+        if i == "*": i = 10
+        if i == "#": i = 12
+        if i == 0: i = 11
+
+        if i == 1 or i == 4 or i == 7 or i == 10:
             answer += "L"
-            left = key
-        elif key in [3, 6, 9, "#"]:
+            lnow = i
+        elif i == 3 or i == 6 or i == 9 or i == 12:
             answer += "R"
-            right = key
+            rnow = i
         else:
-            x,y = keypad[key][0],keypad[key][1] # 2 1
-            lx, ly = keypad[left][0],keypad[left][1] # 2 0
-            rx, ry = keypad[right][0],keypad[right][1] # 3 1
-            left_distance = abs(x - lx) + abs(y - ly)
-            right_distance = abs(x - rx) + abs(y - ry)
-            print(key, left, right)
-            print(left_distance, right_distance)
-            if left_distance > right_distance:
+            pt = ptDict[i]
+            lpt = ptDict[lnow]
+            rpt = ptDict[rnow]
+            ldist = abs(pt[0]-lpt[0])+abs(pt[1]-lpt[1])
+            rdist = abs(pt[0]-rpt[0])+abs(pt[1]-rpt[1])
+            print("dis",i,ldist,rdist)
+            if ldist>rdist:
                 answer += "R"
-                right = key
-            elif left_distance < right_distance:
+                rnow = i
+            elif ldist<rdist:
                 answer += "L"
-                left = key
+                lnow = i
             else:
-                if hand == "left":
-                    answer += "L"
-                    left = key
-                else:
+                if hand == "right":
                     answer += "R"
-                    right = key
+                    rnow = i
+                else:
+                    answer += "L"
+                    lnow = i
+        print(lnow,rnow)
     return answer
 
-print(solution([7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2],"left"))
+print(solution([1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5], "right"))

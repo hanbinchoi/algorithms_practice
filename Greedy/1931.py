@@ -1,18 +1,13 @@
 n = int(input())
 meeting = []
 for i in range(n):
-    start,end = map(int,input().split())
-    meeting.append([start,end])
+    s,e = map(int,input().split())
+    meeting.append([s,e,e-s])
 
-meeting.sort(key=lambda x:(x[1],x[0]))
-answer = 1
-end = meeting[0][1]
-meeting.pop(0)
-for i in meeting:
-    if end <= i[0]:
-        end = i[1]
-        answer += 1
-
-
-
-print(answer)
+meeting.sort(key=lambda x:x[1])
+ans = 0
+while meeting:
+    k = meeting.pop(0)
+    ans +=1
+    meeting = [i for i in meeting if k[1]<=i[0]]
+print(ans)

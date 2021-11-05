@@ -1,12 +1,13 @@
 n, k = map(int,input().split())
-unitList = []
+
+units = []
 for i in range(n):
-    unitList.append(int(input()))
+    units.append(int(input()))
 
-unitList.sort(reverse=True)
-answer = 0
-for i in unitList:
-    answer += k//i
-    k = k%i
+units.sort(reverse=True)
+ans = 0
+while k!=0:
+    ans += k//units[0]
+    k = k%units.pop(0)
 
-print(answer)
+print(ans)

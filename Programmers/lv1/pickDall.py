@@ -1,18 +1,16 @@
 def solution(board, moves):
     answer = 0
-    stack = []
-
-
+    dalls = []
     for i in moves:
-        for j in range(len(board[0])):
-            if board[j][i-1] != 0:
-                stack.append(board[j][i-1])
-                board[j][i - 1] = 0
+        for j in board:
+            if j[i-1] != 0:
+                if len(dalls)!= 0 and dalls[-1] == j[i-1]:
+                    dalls.pop()
+                    answer += 2
+                else: dalls.append(j[i-1])
+                j[i-1] = 0
                 break
-        if len(stack) >= 2:
-            if stack[-1]==stack[-2]:
-                answer += 2
-                stack = stack[:-2]
+    print(dalls)
     return answer
 
-print(solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]], [1,5,3,5,1,2,1,4]))
+print(solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]],[1,5,3,5,1,2,1,4]))

@@ -2,17 +2,17 @@ from copy import deepcopy
 
 
 def solution(participant, completion):
-    d = dict()
     ans =""
+    players = {}
     for i in participant:
-        d[i] = 0
-    for i in participant:
-        if i in completion:
-            d[i] += 1
-
-    for keys,value in d.items():
-        if value != 1:
-            ans += keys
-    return ans
+        if i in players.keys():
+            players[i] += 1
+        else:
+            players[i] = 1
+    for i in completion:
+        players[i] -= 1
+    reverse_p = dict(map(reversed,players.items()))
+    ans = reverse_p[max(players.values())]
+    return ''.join(ans)
 
 print(solution(["mislav", "stanko", "mislav", "ana"],	["stanko", "ana", "mislav"]))
