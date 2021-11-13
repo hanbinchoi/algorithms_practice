@@ -90,4 +90,4 @@ def solution(grid, clockwise):
 
     return answer
 
-print(solution(["A","MAN","DRINK","WATER11"],	False))
+print(solution(["A"],	False))

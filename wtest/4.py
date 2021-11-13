@@ -19,4 +19,4 @@ def solution(s):
     lens.sort()
     return lens
 
-print(solution("aaabbaaa"))
+print(solution("a"))
