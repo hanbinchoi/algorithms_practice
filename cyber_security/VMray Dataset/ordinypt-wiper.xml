@@ -1,0 +1,236 @@
+<stix:STIX_Package 
+	xmlns:CustomObj="http://cybox.mitre.org/objects#CustomObject-1"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:MutexObj="http://cybox.mitre.org/objects#MutexObject-2"
+	xmlns:ProcessObj="http://cybox.mitre.org/objects#ProcessObject-2"
+	xmlns:VMRayAnalyzer="http://vmray.com/analyzer"
+	xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://cybox.mitre.org/objects#CustomObject-1 http://cybox.mitre.org/XMLSchema/objects/Custom/1.1/Custom_Object.xsd
+	http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd
+	http://cybox.mitre.org/objects#MutexObject-2 http://cybox.mitre.org/XMLSchema/objects/Mutex/2.1/Mutex_Object.xsd
+	http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd
+	http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.1/Win_Registry_Key_Object.xsd
+	http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.2/indicator.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.2/ttp.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.2/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.2/stix_core.xsd" id="VMRayAnalyzer:Package-7d437338-5a23-4556-ba45-78d724186dfb" version="1.2">
+    <stix:STIX_Header>
+        <stix:Title>VMRay Analyzer Report for Sample #20158</stix:Title>
+        <stix:Information_Source>
+            <stixCommon:Tools>
+                <cyboxCommon:Tool>
+                    <cyboxCommon:Name>VMRay Analyzer</cyboxCommon:Name>
+                    <cyboxCommon:Version>2.2.0</cyboxCommon:Version>
+                </cyboxCommon:Tool>
+            </stixCommon:Tools>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="VMRayAnalyzer:Observable-f642071b-26ea-4123-a0de-8665b0a8b595">
+            <cybox:Title>Process</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Process-a2f51059-e7a7-47b6-8a2c-bba70b19c5e0">
+                <cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="monitored_id">1</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <ProcessObj:PID>2556</ProcessObj:PID>
+                    <ProcessObj:Name>ofgzdr.exe</ProcessObj:Name>
+                    <ProcessObj:Parent_PID>1488</ProcessObj:Parent_PID>
+                    <ProcessObj:Image_Info>
+                        <ProcessObj:File_Name>ofgzdr.exe</ProcessObj:File_Name>
+                        <ProcessObj:Command_Line>"C:\Users\EEBsYm5\Desktop\ofgzdr.exe" </ProcessObj:Command_Line>
+                        <ProcessObj:Current_Directory>C:\Users\EEBsYm5\Desktop\</ProcessObj:Current_Directory>
+                        <ProcessObj:Path>c:\users\eebsym5\desktop\ofgzdr.exe</ProcessObj:Path>
+                    </ProcessObj:Image_Info>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Mutex-4e88fb9a-e96b-4319-8794-d54e05b336c2">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Created</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-b69b6b0b-c0d0-46a7-b717-fe76c02af08b">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-2299ed80-a4d9-4435-866e-306f9fc69c18">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-18769d16-c9ac-4575-bd1c-b7a10168b96d">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-ca332051-280b-4682-8a0f-62cca00df445">
+            <cybox:Title>Mutex</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Mutex-4e88fb9a-e96b-4319-8794-d54e05b336c2">
+                <cybox:Properties xsi:type="MutexObj:MutexObjectType" named="true">
+                    <MutexObj:Name>HSDFSD-HFSD-3241-91E7-ASDGSDGHH</MutexObj:Name>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-00ccae95-52cd-436d-a8ba-0b32f9b04338">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-b69b6b0b-c0d0-46a7-b717-fe76c02af08b">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\Borland\Locales</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_CURRENT_USER</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-178f356b-98e1-41d5-93b9-f3006bb7ff37">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-2299ed80-a4d9-4435-866e-306f9fc69c18">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\Borland\Locales</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-8cb8e6a7-bd36-416b-86a2-4f68237fd895">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-18769d16-c9ac-4575-bd1c-b7a10168b96d">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\Borland\Delphi\Locales</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_CURRENT_USER</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="VMRayAnalyzer:indicator-240a8111-36e9-495d-88d9-850f274bca1b" timestamp="2017-11-10T14:44:39.105811+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Analyzed Sample #20158</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Alternative_ID>20158</indicator:Alternative_ID>
+            <indicator:Alternative_ID>Sample-ID: #20158</indicator:Alternative_ID>
+            <indicator:Alternative_ID>Job-ID: #13469</indicator:Alternative_ID>
+            <indicator:Short_Description>This sample was analyzed by VMRay Analyzer 2.2.0 on a Windows 7 system</indicator:Short_Description>
+            <indicator:Observable id="VMRayAnalyzer:Observable-dc1f9515-82f9-4174-ae8c-d6c54b7c5c01">
+                <cybox:Observable_Composition operator="AND">
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-f642071b-26ea-4123-a0de-8665b0a8b595">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-ca332051-280b-4682-8a0f-62cca00df445">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-00ccae95-52cd-436d-a8ba-0b32f9b04338">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-178f356b-98e1-41d5-93b9-f3006bb7ff37">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-8cb8e6a7-bd36-416b-86a2-4f68237fd895">
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-b39798f2-cfb5-49dd-a5ac-abdd6416f954" timestamp="2017-11-10T14:44:39.107876+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-2d63ae3a-0b9b-4cd8-9349-b8509ec1169b" timestamp="2017-11-10T14:44:39.108099+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Likely_Impact timestamp="2017-11-10T14:44:39.108241+00:00">
+                <stixCommon:Value>0</stixCommon:Value>
+                <stixCommon:Description>VTI Score based on VTI Database Version 2.6</stixCommon:Description>
+            </indicator:Likely_Impact>
+            <indicator:Related_Indicators>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator id="VMRayAnalyzer:indicator-0b8bbdea-4fb1-4408-84fc-3871ee3c182f" timestamp="2017-11-10T14:44:39.107408+00:00" xsi:type='indicator:IndicatorType'>
+                        <indicator:Title>Metadata of Sample File #20158</indicator:Title>
+                        <indicator:Alternative_ID>Submission-ID: #20342</indicator:Alternative_ID>
+                        <indicator:Observable id="VMRayAnalyzer:Observable-cecd99ad-6084-4abd-9944-a99b118324e6">
+                            <cybox:Object id="VMRayAnalyzer:File-79540893-1a79-4f84-871e-f2a5f58cde62">
+                                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                    <FileObj:File_Name>C:\Users\EEBsYm5\Desktop\ofgzdr.exe</FileObj:File_Name>
+                                    <FileObj:File_Extension>exe</FileObj:File_Extension>
+                                    <FileObj:Hashes>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>870acd0ca66986cc20ab0a655fbc5873</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>SHA1</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>4a1b74432e38a1dfbd0b3336547cd764a25886e2</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>SHA256</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>085256b114079911b64f5826165f85a28a2a4ddc2ce0d935fa8545651ce5ab09</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                    </FileObj:Hashes>
+                                </cybox:Properties>
+                                <cybox:Related_Objects>
+                                    <cybox:Related_Object idref="VMRayAnalyzer:Process-a2f51059-e7a7-47b6-8a2c-bba70b19c5e0">
+                                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened_By</cybox:Relationship>
+                                    </cybox:Related_Object>
+                                </cybox:Related_Objects>
+                            </cybox:Object>
+                        </indicator:Observable>
+                    </stixCommon:Indicator>
+                </indicator:Related_Indicator>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator id="VMRayAnalyzer:indicator-ee26715e-bea1-46d8-891d-dc73b5df9e61" timestamp="2017-11-10T14:44:39.107559+00:00" xsi:type='indicator:IndicatorType'>
+                        <indicator:Title>Metadata of Analysis for Job-ID #13469</indicator:Title>
+                        <indicator:Observable id="VMRayAnalyzer:Observable-0d9153d6-eeb2-44db-9ea2-d3827e56c3c0">
+                            <cybox:Object id="VMRayAnalyzer:Custom-527f17a3-2672-4fef-8bd2-552758d57660">
+                                <cybox:Properties xsi:type="CustomObj:CustomObjectType" custom_name="VMRayAnalyzer:AnalysisMetadataType">
+                                    <cyboxCommon:Custom_Properties>
+                                        <cyboxCommon:Property name="Termination Reason">Timeout</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="Cybox Truncated">True</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Architecture">x86 32-bit PAE</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Kernel Version">6.1.7601.17514 (684da42a-30cc-450f-81c5-35b4d18944b1)</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Name">win7_32_sp1</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="Execution Successful">True</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Analysis Duration Time">140.681</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM OS">Windows 7</cyboxCommon:Property>
+                                    </cyboxCommon:Custom_Properties>
+                                    <CustomObj:Description>This is a property collection for additional information of VMRay analysis</CustomObj:Description>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </indicator:Observable>
+                    </stixCommon:Indicator>
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>VMRay Analyzer</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="VMRayAnalyzer:ttp-b39798f2-cfb5-49dd-a5ac-abdd6416f954" timestamp="2017-11-10T14:44:39.107876+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>File System</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 4/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_delete_user_files</ttp:Title>
+                        <ttp:Description>Delete multiple user files. This is an indicator for wiper malware.</ttp:Description>
+                        <ttp:Short_Description>Delete user files</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-2d63ae3a-0b9b-4cd8-9349-b8509ec1169b" timestamp="2017-11-10T14:44:39.108099+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Process</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_install_ipc_endpoint</ttp:Title>
+                        <ttp:Description>Create mutex with name "HSDFSD-HFSD-3241-91E7-ASDGSDGHH".</ttp:Description>
+                        <ttp:Short_Description>Create system object</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+</stix:STIX_Package>

@@ -1,0 +1,969 @@
+<stix:STIX_Package 
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:CustomObj="http://cybox.mitre.org/objects#CustomObject-1"
+	xmlns:DNSRecordObj="http://cybox.mitre.org/objects#DNSRecordObject-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:HostnameObj="http://cybox.mitre.org/objects#HostnameObject-1"
+	xmlns:MutexObj="http://cybox.mitre.org/objects#MutexObject-2"
+	xmlns:NetworkConnectionObj="http://cybox.mitre.org/objects#NetworkConnectionObject-2"
+	xmlns:NetworkSocketObj="http://cybox.mitre.org/objects#NetworkSocketObject-2"
+	xmlns:PortObj="http://cybox.mitre.org/objects#PortObject-2"
+	xmlns:ProcessObj="http://cybox.mitre.org/objects#ProcessObject-2"
+	xmlns:SocketAddressObj="http://cybox.mitre.org/objects#SocketAddressObject-1"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:VMRayAnalyzer="http://vmray.com/analyzer"
+	xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd
+	http://cybox.mitre.org/objects#CustomObject-1 http://cybox.mitre.org/XMLSchema/objects/Custom/1.1/Custom_Object.xsd
+	http://cybox.mitre.org/objects#DNSRecordObject-2 http://cybox.mitre.org/XMLSchema/objects/DNS_Record/2.1/DNS_Record_Object.xsd
+	http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd
+	http://cybox.mitre.org/objects#HostnameObject-1 http://cybox.mitre.org/XMLSchema/objects/Hostname/1.0/Hostname_Object.xsd
+	http://cybox.mitre.org/objects#MutexObject-2 http://cybox.mitre.org/XMLSchema/objects/Mutex/2.1/Mutex_Object.xsd
+	http://cybox.mitre.org/objects#NetworkConnectionObject-2 http://cybox.mitre.org/XMLSchema/objects/Network_Connection/2.1/Network_Connection_Object.xsd
+	http://cybox.mitre.org/objects#NetworkSocketObject-2 http://cybox.mitre.org/XMLSchema/objects/Network_Socket/2.1/Network_Socket_Object.xsd
+	http://cybox.mitre.org/objects#PortObject-2 http://cybox.mitre.org/XMLSchema/objects/Port/2.1/Port_Object.xsd
+	http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd
+	http://cybox.mitre.org/objects#SocketAddressObject-1 http://cybox.mitre.org/XMLSchema/objects/Socket_Address/1.1/Socket_Address_Object.xsd
+	http://cybox.mitre.org/objects#URIObject-2 http://cybox.mitre.org/XMLSchema/objects/URI/2.1/URI_Object.xsd
+	http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.1/Win_Registry_Key_Object.xsd
+	http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.2/indicator.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.2/ttp.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.2/stix_common.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.2/stix_core.xsd" id="VMRayAnalyzer:Package-6a68d488-a9f4-4d6c-8f2a-099a47132df3" version="1.2">
+    <stix:STIX_Header>
+        <stix:Title>VMRay Analyzer Report for Sample #21058</stix:Title>
+        <stix:Information_Source>
+            <stixCommon:Tools>
+                <cyboxCommon:Tool>
+                    <cyboxCommon:Name>VMRay Analyzer</cyboxCommon:Name>
+                    <cyboxCommon:Version>2.2.0</cyboxCommon:Version>
+                </cyboxCommon:Tool>
+            </stixCommon:Tools>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="VMRayAnalyzer:Observable-52fb8b58-792f-47e4-9022-f75d88c1aa6e">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-cfaf77a1-6690-4050-8069-f2680c7888e1">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                    <URIObj:Value>kdotraky.com</URIObj:Value>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Address-1d2fe719-cfd0-4a7a-b44c-df4be050eea6">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-b5ace4e5-c36c-4a52-9588-2925de2b7526">
+            <cybox:Title>Address</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Address-1d2fe719-cfd0-4a7a-b44c-df4be050eea6">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                    <AddressObj:Address_Value>101.99.75.184</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-39039556-5a8e-4424-94c0-a167be92c9de">
+            <cybox:Title>Process</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Process-a9cf5371-c063-43c9-a564-ee65b1c67395">
+                <cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="monitored_id">1</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <ProcessObj:PID>2352</ProcessObj:PID>
+                    <ProcessObj:Name>excel.exe</ProcessObj:Name>
+                    <ProcessObj:Parent_PID>1100</ProcessObj:Parent_PID>
+                    <ProcessObj:Image_Info>
+                        <ProcessObj:File_Name>excel.exe</ProcessObj:File_Name>
+                        <ProcessObj:Command_Line>"C:\Program Files (x86)\Microsoft Office\Office12\EXCEL.EXE"</ProcessObj:Command_Line>
+                        <ProcessObj:Current_Directory>C:\Users\kFT6uTQW\Desktop\</ProcessObj:Current_Directory>
+                        <ProcessObj:Path>c:\program files (x86)\microsoft office\office12\excel.exe</ProcessObj:Path>
+                    </ProcessObj:Image_Info>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Process-8cfed9bd-606d-442a-9028-39d22c0e94c0">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Child_Of</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Process-4b02f6a1-36ee-4e85-82b0-d9536ba88e0c">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Child_Of</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Process-a9cf5371-c063-43c9-a564-ee65b1c67395">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Created</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:File-3494257a-95b6-43d9-bab7-a2a2c6975604">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Created</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-3735a8fd-814d-4930-9bfc-328d79a955d0">
+            <cybox:Title>Process</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Process-8cfed9bd-606d-442a-9028-39d22c0e94c0">
+                <cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="monitored_id">2</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <ProcessObj:PID>984</ProcessObj:PID>
+                    <ProcessObj:Name>svchost.exe</ProcessObj:Name>
+                    <ProcessObj:Parent_PID>452</ProcessObj:Parent_PID>
+                    <ProcessObj:Image_Info>
+                        <ProcessObj:File_Name>svchost.exe</ProcessObj:File_Name>
+                        <ProcessObj:Command_Line>C:\Windows\system32\svchost.exe -k LocalService</ProcessObj:Command_Line>
+                        <ProcessObj:Current_Directory>C:\Windows\system32\</ProcessObj:Current_Directory>
+                        <ProcessObj:Path>c:\windows\system32\svchost.exe</ProcessObj:Path>
+                    </ProcessObj:Image_Info>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-d6036f13-0c8c-42c2-902b-206d1917a397">
+            <cybox:Title>Process</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Process-4b02f6a1-36ee-4e85-82b0-d9536ba88e0c">
+                <cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="monitored_id">3</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <ProcessObj:PID>2620</ProcessObj:PID>
+                    <ProcessObj:Name>heidi.exe</ProcessObj:Name>
+                    <ProcessObj:Parent_PID>2352</ProcessObj:Parent_PID>
+                    <ProcessObj:Image_Info>
+                        <ProcessObj:File_Name>heidi.exe</ProcessObj:File_Name>
+                        <ProcessObj:Command_Line>"C:\Users\kFT6uTQW\AppData\Local\Temp\heidi.exe" </ProcessObj:Command_Line>
+                        <ProcessObj:Current_Directory>C:\Users\kFT6uTQW\Desktop\</ProcessObj:Current_Directory>
+                        <ProcessObj:Path>c:\users\kft6utqw\appdata\local\temp\heidi.exe</ProcessObj:Path>
+                    </ProcessObj:Image_Info>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Process-2c39d83d-df65-41c6-8896-eb4665dd59cb">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Child_Of</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-2c03671e-6fec-4002-8d0f-b7a80c9eff01">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-00f32572-17a6-458a-896a-328e1a255504">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-ff4783b0-7e00-4f77-b764-9e8b1aed3272">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-cb6dee39-5d08-4142-8730-8b9978f642cb">
+            <cybox:Title>Process</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Process-2c39d83d-df65-41c6-8896-eb4665dd59cb">
+                <cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="monitored_id">4</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <ProcessObj:PID>2672</ProcessObj:PID>
+                    <ProcessObj:Name>heidi.exe</ProcessObj:Name>
+                    <ProcessObj:Parent_PID>2620</ProcessObj:Parent_PID>
+                    <ProcessObj:Image_Info>
+                        <ProcessObj:File_Name>heidi.exe</ProcessObj:File_Name>
+                        <ProcessObj:Command_Line>"C:\Users\kFT6uTQW\AppData\Local\Temp\heidi.exe" </ProcessObj:Command_Line>
+                        <ProcessObj:Current_Directory>C:\Users\kFT6uTQW\Desktop\</ProcessObj:Current_Directory>
+                        <ProcessObj:Path>c:\users\kft6utqw\appdata\local\temp\heidi.exe</ProcessObj:Path>
+                    </ProcessObj:Image_Info>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:File-a7268b85-5475-4664-bd16-27bfc5bd785a">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Wrote_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:File-b394e315-25cd-4d3d-a750-f5da54c872fd">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Deleted</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:File-3455f816-2af4-40d4-a2dc-3875b7e0cbfe">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Created</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:File-d5ba63ea-b20f-4b58-9887-7c0a9564439b">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Mutex-d4f25a28-d9d8-4383-91a8-f12e3933e318">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Created</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-b15e027e-3a05-4197-82ec-67f08af88be7">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-fc2c7a7d-fa59-44ee-9d0a-8ea14d1310ca">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-07c9cf9a-6827-4cf2-90be-751f0998dd45">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-c111dbc7-54f6-479b-94c9-ebca37b29105">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-99c597d6-430f-40b6-a8f1-c66e22e9a5f4">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-6a2b7d1d-8533-4412-990a-4b1ae1a72584">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-9445627f-c1d9-45af-bcd6-7d718731af7b">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-3570fc24-60ca-4440-afb1-3d9abacedc80">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-49c0d798-aec8-4424-8119-08966e211e2e">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-d4190e0e-5a00-4a11-8108-5b7b04abc181">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-885acb54-44be-4448-84b4-a56778ef6be5">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Modified_Properties_Of</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:DNSRecord-94f65abc-4607-44a7-83d4-2b9adc6075b9">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Read_From</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:DNSRecord-e6aff464-2913-4a76-9057-dd8f7e7b0b91">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Read_From</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:NetworkSocket-b2c3305e-e74a-4be7-9c13-05c72965e8c8">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Connected_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:NetworkConnection-688998db-b71f-4a5d-8670-5063373dc4a0">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Connected_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:URI-b7b6d34d-7f02-41ce-b14d-9a23bb9a3513">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Connected_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-f5b6ae41-30fa-4d3b-afab-dcf61e8504f0">
+            <cybox:Title>File</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:File-3494257a-95b6-43d9-bab7-a2a2c6975604">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>users\kft6utqw\appdata\local\temp\heidi.exe</FileObj:File_Name>
+                    <FileObj:File_Path>users\kft6utqw\appdata\local\temp\heidi.exe</FileObj:File_Path>
+                    <FileObj:Device_Path>c:\</FileObj:Device_Path>
+                    <FileObj:Full_Path>c:\users\kft6utqw\appdata\local\temp\heidi.exe</FileObj:Full_Path>
+                    <FileObj:File_Extension>exe</FileObj:File_Extension>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>a6a97f17880e37067c822e14a75bb3af</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>SHA1</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>1aab183abb65685af92b201a2e47ba3d9ce0856e</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>SHA256</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>b1eeec190113584579fe9376b88933d5e1871b3e8fdc86d8a490db4d044196ac</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-cb3e0c92-9a98-4864-b6ea-9c1047a698b8">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-1d512f80-271c-4fdd-82e0-a2a49e36927e">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                    <URIObj:Value>http://kdotraky.com/kat/val.exe</URIObj:Value>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:URI-cfaf77a1-6690-4050-8069-f2680c7888e1">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Contains</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-ec4438b6-703e-4515-8903-e9430723e4d1">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-2c03671e-6fec-4002-8d0f-b7a80c9eff01">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\Borland\Locales</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_CURRENT_USER</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-29eab50b-2e2e-47d8-a482-6bd76bf66df2">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-00f32572-17a6-458a-896a-328e1a255504">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\Borland\Locales</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-1e947c68-895e-414d-b326-747d1c5f855d">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-ff4783b0-7e00-4f77-b764-9e8b1aed3272">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\Borland\Delphi\Locales</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_CURRENT_USER</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-a06488fb-26c9-4dbd-9973-9bddda41b70a">
+            <cybox:Title>File</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:File-a7268b85-5475-4664-bd16-27bfc5bd785a">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>users\kft6utqw\appdata\roaming\98e541\12eef2.hdb</FileObj:File_Name>
+                    <FileObj:File_Path>users\kft6utqw\appdata\roaming\98e541\12eef2.hdb</FileObj:File_Path>
+                    <FileObj:Device_Path>c:\</FileObj:Device_Path>
+                    <FileObj:Full_Path>c:\users\kft6utqw\appdata\roaming\98e541\12eef2.hdb</FileObj:Full_Path>
+                    <FileObj:File_Extension>hdb</FileObj:File_Extension>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>aced026ed487b5cbb298f9ab09e6f1c1</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>SHA1</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>1ceff0fbc90b0f2c6fab37bcde68f2a9170a7cf8</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>SHA256</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>c22bcce160e0645d030b554a30a0671bc2b2f30b1654dcd4111d871bb9c8e6bf</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-38a20852-ec5a-4fea-975f-22b4f779965c">
+            <cybox:Title>File</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:File-b394e315-25cd-4d3d-a750-f5da54c872fd">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>users\kft6utqw\appdata\roaming\98e541\12eef2.lck</FileObj:File_Name>
+                    <FileObj:File_Path>users\kft6utqw\appdata\roaming\98e541\12eef2.lck</FileObj:File_Path>
+                    <FileObj:Device_Path>c:\</FileObj:Device_Path>
+                    <FileObj:Full_Path>c:\users\kft6utqw\appdata\roaming\98e541\12eef2.lck</FileObj:Full_Path>
+                    <FileObj:File_Extension>lck</FileObj:File_Extension>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-d94ce02b-a9c2-4b19-9a38-98dc3e4e43c5">
+            <cybox:Title>File</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:File-3455f816-2af4-40d4-a2dc-3875b7e0cbfe">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>users\kft6utqw\appdata\local\google\chrome\user data\default\login data</FileObj:File_Name>
+                    <FileObj:File_Path>users\kft6utqw\appdata\local\google\chrome\user data\default\login data</FileObj:File_Path>
+                    <FileObj:Device_Path>c:\</FileObj:Device_Path>
+                    <FileObj:Full_Path>c:\users\kft6utqw\appdata\local\google\chrome\user data\default\login data</FileObj:Full_Path>
+                    <FileObj:File_Extension/>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-005e4a32-def0-4187-87eb-7184fb60ec8a">
+            <cybox:Title>File</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:File-d5ba63ea-b20f-4b58-9887-7c0a9564439b">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>users\kft6utqw\appdata\roaming\98e541\12eef2.exe</FileObj:File_Name>
+                    <FileObj:File_Path>users\kft6utqw\appdata\roaming\98e541\12eef2.exe</FileObj:File_Path>
+                    <FileObj:Device_Path>c:\</FileObj:Device_Path>
+                    <FileObj:Full_Path>c:\users\kft6utqw\appdata\roaming\98e541\12eef2.exe</FileObj:Full_Path>
+                    <FileObj:File_Extension>exe</FileObj:File_Extension>
+                    <FileObj:Hashes>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>a6a97f17880e37067c822e14a75bb3af</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>SHA1</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>1aab183abb65685af92b201a2e47ba3d9ce0856e</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                        <cyboxCommon:Hash>
+                            <cyboxCommon:Type>SHA256</cyboxCommon:Type>
+                            <cyboxCommon:Simple_Hash_Value>b1eeec190113584579fe9376b88933d5e1871b3e8fdc86d8a490db4d044196ac</cyboxCommon:Simple_Hash_Value>
+                        </cyboxCommon:Hash>
+                    </FileObj:Hashes>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:File-410b3cd4-fb45-449b-b49d-a789d0b8493d">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-0c82d072-f96d-4a13-8c14-b8337977919c">
+            <cybox:Title>File</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:File-410b3cd4-fb45-449b-b49d-a789d0b8493d">
+                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                    <FileObj:File_Name>users\kft6utqw\appdata\local\temp\heidi.exe</FileObj:File_Name>
+                    <FileObj:File_Path>users\kft6utqw\appdata\local\temp\heidi.exe</FileObj:File_Path>
+                    <FileObj:Device_Path>c:\</FileObj:Device_Path>
+                    <FileObj:Full_Path>c:\users\kft6utqw\appdata\local\temp\heidi.exe</FileObj:Full_Path>
+                    <FileObj:File_Extension>exe</FileObj:File_Extension>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:File-d5ba63ea-b20f-4b58-9887-7c0a9564439b">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved_From</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-f5ebf16e-98ac-4739-916b-2df36f9e5d85">
+            <cybox:Title>Mutex</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Mutex-d4f25a28-d9d8-4383-91a8-f12e3933e318">
+                <cybox:Properties xsi:type="MutexObj:MutexObjectType" named="true">
+                    <MutexObj:Name>73EE9CC98E5412EEF2B9A336</MutexObj:Name>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-d44e6fc7-52bc-4c47-a3c9-1215e7383ddb">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-b15e027e-3a05-4197-82ec-67f08af88be7">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Microsoft\Cryptography</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>MachineGuid</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-3c146988-66d2-4462-a1d8-5370f2b7b040">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-fc2c7a7d-fa59-44ee-9d0a-8ea14d1310ca">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\QtWeb.NET\QtWeb Internet Browser\AutoComplete</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_CURRENT_USER</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-f82376ae-62be-49f6-a717-6b12b45b6360">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-07c9cf9a-6827-4cf2-90be-751f0998dd45">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Mozilla\Mozilla Firefox</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>CurrentVersion</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-ed0aa894-7df6-40d7-ba7e-0fe8cc4c0753">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-c111dbc7-54f6-479b-94c9-ebca37b29105">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Mozilla\Mozilla Firefox\25.0 (en-US)\Main</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>Install Directory</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-85aeec86-c5cc-49ba-9f76-113a73f3fd7b">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-99c597d6-430f-40b6-a8f1-c66e22e9a5f4">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\ComodoGroup\IceDragon\Setup</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>SetupPath</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-55f01a7d-7c9c-49d7-81cc-141c1d1337f9">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-6a2b7d1d-8533-4412-990a-4b1ae1a72584">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Apple Computer, Inc.\Safari</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>InstallDir</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-cfea6113-156c-4f49-99f3-0a4fbeeec41b">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-9445627f-c1d9-45af-bcd6-7d718731af7b">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\K-Meleon</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>CurrentVersion</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-f0e8a398-55ec-4ea2-84b3-0db09eb0a924">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-3570fc24-60ca-4440-afb1-3d9abacedc80">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\mozilla.org\SeaMonkey</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>CurrentVersion</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-660aa672-f186-4a4f-a8ce-e8bfede5c802">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-49c0d798-aec8-4424-8119-08966e211e2e">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Mozilla\SeaMonkey</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>CurrentVersion</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-7cc1b724-5805-4a07-906b-55cbc68751a0">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-d4190e0e-5a00-4a11-8108-5b7b04abc181">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Mozilla\Flock</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>CurrentVersion</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-c9d4a2ec-7fc7-416a-bb4d-c034f1edcf48">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-885acb54-44be-4448-84b4-a56778ef6be5">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>������Д�������ќ��Ћ���Я����Й���Й��я��</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_CURRENT_USER</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-0ce0e337-0c72-4605-b187-ebf17abcbd61">
+            <cybox:Title>DNSRecord</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:DNSRecord-94f65abc-4607-44a7-83d4-2b9adc6075b9">
+                <cybox:Properties xsi:type="DNSRecordObj:DNSRecordObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="service" description="sets the port in each returned address structure">80</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType" type="Domain Name">
+                        <URIObj:Value>kdotraky.com</URIObj:Value>
+                    </DNSRecordObj:Domain_Name>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-6ee08b3d-1a3e-4c89-954e-a0aef995c308">
+            <cybox:Title>DNSRecord</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:DNSRecord-e6aff464-2913-4a76-9057-dd8f7e7b0b91">
+                <cybox:Properties xsi:type="DNSRecordObj:DNSRecordObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="service" description="sets the port in each returned address structure">80</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <DNSRecordObj:Domain_Name xsi:type="URIObj:URIObjectType" type="Domain Name">
+                        <URIObj:Value>����ÅÐÐ��������Ñ���Ð����Ð¯����Ð����Ð���Ñ���</URIObj:Value>
+                    </DNSRecordObj:Domain_Name>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-22c523ef-cc72-43c1-b2b3-7fd0cfeefd07">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-fc0b49e2-d496-4552-a8b3-18564a580239">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                    <URIObj:Value>����ÅÐÐ��������Ñ���Ð����Ð¯����Ð����Ð���Ñ���</URIObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-5806b9f8-832c-490f-8942-2c827cce3922">
+            <cybox:Title>SocketAddress</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:SocketAddress-8b8b764d-835b-464a-b6fd-632ea0d0fe1e">
+                <cybox:Properties xsi:type="SocketAddressObj:SocketAddressObjectType">
+                    <SocketAddressObj:IP_Address xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                        <AddressObj:Address_Value>101.99.75.184</AddressObj:Address_Value>
+                    </SocketAddressObj:IP_Address>
+                    <SocketAddressObj:Port xsi:type="PortObj:PortObjectType">
+                        <PortObj:Port_Value>80</PortObj:Port_Value>
+                        <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+                    </SocketAddressObj:Port>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-7c8d3361-a7d4-467e-a914-76f0519cd07a">
+            <cybox:Title>NetworkSocket</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:NetworkSocket-b2c3305e-e74a-4be7-9c13-05c72965e8c8">
+                <cybox:Properties xsi:type="NetworkSocketObj:NetworkSocketObjectType" is_listening="false">
+                    <NetworkSocketObj:Remote_Address xsi:type="SocketAddressObj:SocketAddressObjectType">
+                        <SocketAddressObj:IP_Address xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                            <AddressObj:Address_Value>101.99.75.184</AddressObj:Address_Value>
+                        </SocketAddressObj:IP_Address>
+                        <SocketAddressObj:Port xsi:type="PortObj:PortObjectType">
+                            <PortObj:Port_Value>80</PortObj:Port_Value>
+                            <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+                        </SocketAddressObj:Port>
+                    </NetworkSocketObj:Remote_Address>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:SocketAddress-8b8b764d-835b-464a-b6fd-632ea0d0fe1e">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Contains</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-ed2865d4-426f-4373-a9fb-206be5252dcd">
+            <cybox:Title>SocketAddress</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:SocketAddress-29892211-f6b2-4782-82dd-abe89ea33eba">
+                <cybox:Properties xsi:type="SocketAddressObj:SocketAddressObjectType">
+                    <SocketAddressObj:Hostname xsi:type="HostnameObj:HostnameObjectType">
+                        <HostnameObj:Hostname_Value>kdotraky.com</HostnameObj:Hostname_Value>
+                    </SocketAddressObj:Hostname>
+                    <SocketAddressObj:Port xsi:type="PortObj:PortObjectType">
+                        <PortObj:Port_Value>80</PortObj:Port_Value>
+                    </SocketAddressObj:Port>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-68d31bcb-f230-4127-855d-cba09b1ef8a1">
+            <cybox:Title>NetworkConnection</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:NetworkConnection-688998db-b71f-4a5d-8670-5063373dc4a0">
+                <cybox:Properties xsi:type="NetworkConnectionObj:NetworkConnectionObjectType">
+                    <NetworkConnectionObj:Layer7_Protocol>HTTP</NetworkConnectionObj:Layer7_Protocol>
+                    <NetworkConnectionObj:Destination_Socket_Address xsi:type="SocketAddressObj:SocketAddressObjectType">
+                        <SocketAddressObj:Hostname xsi:type="HostnameObj:HostnameObjectType">
+                            <HostnameObj:Hostname_Value>kdotraky.com</HostnameObj:Hostname_Value>
+                        </SocketAddressObj:Hostname>
+                        <SocketAddressObj:Port xsi:type="PortObj:PortObjectType">
+                            <PortObj:Port_Value>80</PortObj:Port_Value>
+                        </SocketAddressObj:Port>
+                    </NetworkConnectionObj:Destination_Socket_Address>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-a2496b49-91a2-4f0d-a09a-3dc881cccf19">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-b7b6d34d-7f02-41ce-b14d-9a23bb9a3513">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                    <URIObj:Value>kdotraky.com/temp/Panel/five/fre.php</URIObj:Value>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:URI-73cadc17-ff60-46a5-b73e-0a8295537de7">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Contains</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-3c7b2cb4-80b1-4cb3-a3cb-f9dfeab60622">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-73cadc17-ff60-46a5-b73e-0a8295537de7">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                    <URIObj:Value>None</URIObj:Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="VMRayAnalyzer:indicator-3269f5aa-54d9-459c-a41e-502ffd47abde" timestamp="2018-02-13T17:20:07.341666+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Analyzed Sample #21058</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Alternative_ID>21058</indicator:Alternative_ID>
+            <indicator:Alternative_ID>Sample-ID: #21058</indicator:Alternative_ID>
+            <indicator:Alternative_ID>Job-ID: #17184</indicator:Alternative_ID>
+            <indicator:Short_Description>This sample was analyzed by VMRay Analyzer 2.2.0 on a Windows 7 system</indicator:Short_Description>
+            <indicator:Observable id="VMRayAnalyzer:Observable-a9739ad7-045d-41e3-a7e7-9fa5269f79c9">
+                <cybox:Observable_Composition operator="AND">
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-52fb8b58-792f-47e4-9022-f75d88c1aa6e">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-b5ace4e5-c36c-4a52-9588-2925de2b7526">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-39039556-5a8e-4424-94c0-a167be92c9de">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-3735a8fd-814d-4930-9bfc-328d79a955d0">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-d6036f13-0c8c-42c2-902b-206d1917a397">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-cb6dee39-5d08-4142-8730-8b9978f642cb">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-f5b6ae41-30fa-4d3b-afab-dcf61e8504f0">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-cb3e0c92-9a98-4864-b6ea-9c1047a698b8">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-ec4438b6-703e-4515-8903-e9430723e4d1">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-29eab50b-2e2e-47d8-a482-6bd76bf66df2">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-1e947c68-895e-414d-b326-747d1c5f855d">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-a06488fb-26c9-4dbd-9973-9bddda41b70a">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-38a20852-ec5a-4fea-975f-22b4f779965c">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-d94ce02b-a9c2-4b19-9a38-98dc3e4e43c5">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-005e4a32-def0-4187-87eb-7184fb60ec8a">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-0c82d072-f96d-4a13-8c14-b8337977919c">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-f5ebf16e-98ac-4739-916b-2df36f9e5d85">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-d44e6fc7-52bc-4c47-a3c9-1215e7383ddb">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-3c146988-66d2-4462-a1d8-5370f2b7b040">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-f82376ae-62be-49f6-a717-6b12b45b6360">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-ed0aa894-7df6-40d7-ba7e-0fe8cc4c0753">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-85aeec86-c5cc-49ba-9f76-113a73f3fd7b">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-55f01a7d-7c9c-49d7-81cc-141c1d1337f9">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-cfea6113-156c-4f49-99f3-0a4fbeeec41b">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-f0e8a398-55ec-4ea2-84b3-0db09eb0a924">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-660aa672-f186-4a4f-a8ce-e8bfede5c802">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-7cc1b724-5805-4a07-906b-55cbc68751a0">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-c9d4a2ec-7fc7-416a-bb4d-c034f1edcf48">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-0ce0e337-0c72-4605-b187-ebf17abcbd61">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-6ee08b3d-1a3e-4c89-954e-a0aef995c308">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-22c523ef-cc72-43c1-b2b3-7fd0cfeefd07">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-5806b9f8-832c-490f-8942-2c827cce3922">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-7c8d3361-a7d4-467e-a914-76f0519cd07a">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-ed2865d4-426f-4373-a9fb-206be5252dcd">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-68d31bcb-f230-4127-855d-cba09b1ef8a1">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-a2496b49-91a2-4f0d-a09a-3dc881cccf19">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-3c7b2cb4-80b1-4cb3-a3cb-f9dfeab60622">
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-b0375a8a-93b8-453d-846e-7616341766f6" timestamp="2018-02-13T17:20:07.343666+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-df449782-be55-4bd7-a321-a2ef161ec7f5" timestamp="2018-02-13T17:20:07.343887+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-c9808e46-871a-4bca-9a68-e027e4df5cef" timestamp="2018-02-13T17:20:07.344131+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-b5389c89-5240-4222-9c13-9215becc6009" timestamp="2018-02-13T17:20:07.344357+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-69a4470a-f8a0-4937-81ca-b8436a10999c" timestamp="2018-02-13T17:20:07.344525+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-9bb0ea28-8366-4e06-a6b2-665a0bdeda62" timestamp="2018-02-13T17:20:07.344685+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-757e45b3-b07e-4514-ae67-a44232b70715" timestamp="2018-02-13T17:20:07.344845+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-e49030ac-5fdc-46cb-a427-2a3937602321" timestamp="2018-02-13T17:20:07.345002+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Likely_Impact timestamp="2018-02-13T17:20:07.345134+00:00">
+                <stixCommon:Value>0</stixCommon:Value>
+                <stixCommon:Description>VTI Score based on VTI Database Version 2.6</stixCommon:Description>
+            </indicator:Likely_Impact>
+            <indicator:Related_Indicators>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator id="VMRayAnalyzer:indicator-827dcff6-9649-42aa-9b87-828b03580968" timestamp="2018-02-13T17:20:07.343268+00:00" xsi:type='indicator:IndicatorType'>
+                        <indicator:Title>Metadata of Sample File #21058</indicator:Title>
+                        <indicator:Alternative_ID>Submission-ID: #22043</indicator:Alternative_ID>
+                        <indicator:Observable id="VMRayAnalyzer:Observable-9d4d41d0-549a-4385-a514-84f06dd83427">
+                            <cybox:Object id="VMRayAnalyzer:File-d91d30a6-f228-4ad3-bd8f-dc9022b884db">
+                                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                    <FileObj:File_Name>C:\Users\kFT6uTQW\Desktop\QAS_031218.xls</FileObj:File_Name>
+                                    <FileObj:File_Extension>xls</FileObj:File_Extension>
+                                    <FileObj:Hashes>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>e9095deab097f17e0989cf518b0133ce</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>SHA1</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>4d3e7af89f9afb8c5d4b0f7c3f865bb4dbacf327</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>SHA256</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>2dc346015c02c8c9f97e75f72cf194c8a8830c7a932ba22c502fcd3841a14e56</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                    </FileObj:Hashes>
+                                </cybox:Properties>
+                                <cybox:Related_Objects>
+                                    <cybox:Related_Object idref="VMRayAnalyzer:Process-a9cf5371-c063-43c9-a564-ee65b1c67395">
+                                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened_By</cybox:Relationship>
+                                    </cybox:Related_Object>
+                                </cybox:Related_Objects>
+                            </cybox:Object>
+                        </indicator:Observable>
+                    </stixCommon:Indicator>
+                </indicator:Related_Indicator>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator id="VMRayAnalyzer:indicator-6f119d36-abfd-41c2-a4ff-b957e545afaa" timestamp="2018-02-13T17:20:07.343404+00:00" xsi:type='indicator:IndicatorType'>
+                        <indicator:Title>Metadata of Analysis for Job-ID #17184</indicator:Title>
+                        <indicator:Observable id="VMRayAnalyzer:Observable-2bdf32b4-ea5e-4d2a-9af3-234fd9d04750">
+                            <cybox:Object id="VMRayAnalyzer:Custom-5a107b90-b884-4e7b-af2e-0ba6eec021a0">
+                                <cybox:Properties xsi:type="CustomObj:CustomObjectType" custom_name="VMRayAnalyzer:AnalysisMetadataType">
+                                    <cyboxCommon:Custom_Properties>
+                                        <cyboxCommon:Property name="Termination Reason">Timeout</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="Cybox Truncated">False</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Architecture">x86 64-bit</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Kernel Version">6.1.7601.17514 (3844dbb9-2017-4967-be7a-a4a2c20430fa)</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Name">win7_64_sp1-mso2007</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="Execution Successful">True</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Analysis Duration Time">221.291</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM OS">Windows 7</cyboxCommon:Property>
+                                    </cyboxCommon:Custom_Properties>
+                                    <CustomObj:Description>This is a property collection for additional information of VMRay analysis</CustomObj:Description>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </indicator:Observable>
+                    </stixCommon:Indicator>
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>VMRay Analyzer</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="VMRayAnalyzer:ttp-b0375a8a-93b8-453d-846e-7616341766f6" timestamp="2018-02-13T17:20:07.343666+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Network</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 4/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_download_file_by_url</ttp:Title>
+                        <ttp:Description>Download file from "http://kdotraky.com/kat/val.exe" to "c:\users\kft6utqw\appdata\local\temp\heidi.exe".</ttp:Description>
+                        <ttp:Short_Description>Download file</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-df449782-be55-4bd7-a321-a2ef161ec7f5" timestamp="2018-02-13T17:20:07.343887+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Process</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 4/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_document_create_process</ttp:Title>
+                        <ttp:Description>Create process "C:\Users\kFT6uTQW\AppData\Local\Temp\heidi.exe".</ttp:Description>
+                        <ttp:Short_Description>Create process</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-c9808e46-871a-4bca-9a68-e027e4df5cef" timestamp="2018-02-13T17:20:07.344131+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Anti Analysis</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 4/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_detect_debugger_by_api</ttp:Title>
+                        <ttp:Description>Check via API "NtQueryInformationProcess".</ttp:Description>
+                        <ttp:Short_Description>Try to detect debugger</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-b5389c89-5240-4222-9c13-9215becc6009" timestamp="2018-02-13T17:20:07.344357+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Information Stealing</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 2/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_read_machine_guid</ttp:Title>
+                        <ttp:Description>Read the cryptographic machine GUID from registry.</ttp:Description>
+                        <ttp:Short_Description>Read system data</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-69a4470a-f8a0-4937-81ca-b8436a10999c" timestamp="2018-02-13T17:20:07.344525+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Process</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_install_ipc_endpoint</ttp:Title>
+                        <ttp:Description>Create mutex with name "73EE9CC98E5412EEF2B9A336".</ttp:Description>
+                        <ttp:Short_Description>Create system object</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-9bb0ea28-8366-4e06-a6b2-665a0bdeda62" timestamp="2018-02-13T17:20:07.344685+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Browser</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 3/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_read_browser_credentials</ttp:Title>
+                        <ttp:Description>Read saved credentials for "Google Chrome".</ttp:Description>
+                        <ttp:Short_Description>Read data related to saved browser credentials</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-757e45b3-b07e-4514-ae67-a44232b70715" timestamp="2018-02-13T17:20:07.344845+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Network</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 3/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_request_dns_by_name</ttp:Title>
+                        <ttp:Description>Resolve host name "kdotraky.com".</ttp:Description>
+                        <ttp:Short_Description>Perform DNS request</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-e49030ac-5fdc-46cb-a427-2a3937602321" timestamp="2018-02-13T17:20:07.345002+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Network</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 3/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_request_dns_by_name</ttp:Title>
+                        <ttp:Description>Resolve host name "ÅÐÐÑÐÐ¯ÐÐÑ".</ttp:Description>
+                        <ttp:Short_Description>Perform DNS request</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+</stix:STIX_Package>

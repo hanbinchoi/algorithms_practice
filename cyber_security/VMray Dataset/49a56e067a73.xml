@@ -1,0 +1,583 @@
+<stix:STIX_Package 
+	xmlns:ProcessObj="http://cybox.mitre.org/objects#ProcessObject-2"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:WinRegistryKeyObj="http://cybox.mitre.org/objects#WinRegistryKeyObject-2"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:MutexObj="http://cybox.mitre.org/objects#MutexObject-2"
+	xmlns:CustomObj="http://cybox.mitre.org/objects#CustomObject-1"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:ttp="http://stix.mitre.org/TTP-1"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:VMRayAnalyzer="http://vmray.com/analyzer"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	
+	xsi:schemaLocation="http://cybox.mitre.org/objects#ProcessObject-2 http://cybox.mitre.org/XMLSchema/objects/Process/2.1/Process_Object.xsd
+	http://cybox.mitre.org/objects#URIObject-2 http://cybox.mitre.org/XMLSchema/objects/URI/2.1/URI_Object.xsd
+	http://cybox.mitre.org/default_vocabularies-2 http://cybox.mitre.org/XMLSchema/default_vocabularies/2.1/cybox_default_vocabularies.xsd
+	http://cybox.mitre.org/objects#FileObject-2 http://cybox.mitre.org/XMLSchema/objects/File/2.1/File_Object.xsd
+	http://cybox.mitre.org/objects#AddressObject-2 http://cybox.mitre.org/XMLSchema/objects/Address/2.1/Address_Object.xsd
+	http://cybox.mitre.org/objects#WinRegistryKeyObject-2 http://cybox.mitre.org/XMLSchema/objects/Win_Registry_Key/2.1/Win_Registry_Key_Object.xsd
+	http://stix.mitre.org/default_vocabularies-1 http://stix.mitre.org/XMLSchema/default_vocabularies/1.2.0/stix_default_vocabularies.xsd
+	http://cybox.mitre.org/objects#MutexObject-2 http://cybox.mitre.org/XMLSchema/objects/Mutex/2.1/Mutex_Object.xsd
+	http://cybox.mitre.org/objects#CustomObject-1 http://cybox.mitre.org/XMLSchema/objects/Custom/1.1/Custom_Object.xsd
+	http://stix.mitre.org/stix-1 http://stix.mitre.org/XMLSchema/core/1.2/stix_core.xsd
+	http://stix.mitre.org/common-1 http://stix.mitre.org/XMLSchema/common/1.2/stix_common.xsd
+	http://stix.mitre.org/TTP-1 http://stix.mitre.org/XMLSchema/ttp/1.2/ttp.xsd
+	http://cybox.mitre.org/common-2 http://cybox.mitre.org/XMLSchema/common/2.1/cybox_common.xsd
+	http://stix.mitre.org/Indicator-2 http://stix.mitre.org/XMLSchema/indicator/2.2/indicator.xsd
+	http://cybox.mitre.org/cybox-2 http://cybox.mitre.org/XMLSchema/core/2.1/cybox_core.xsd" id="VMRayAnalyzer:Package-722a16ec-902c-456c-9a9c-d5274dcd6661" version="1.2">
+    <stix:STIX_Header>
+        <stix:Title>VMRay Analyzer Report for Sample #1004415</stix:Title>
+        <stix:Information_Source>
+            <stixCommon:Tools>
+                <cyboxCommon:Tool>
+                    <cyboxCommon:Name>VMRay Analyzer</cyboxCommon:Name>
+                    <cyboxCommon:Version>3.2.2</cyboxCommon:Version>
+                </cyboxCommon:Tool>
+            </stixCommon:Tools>
+        </stix:Information_Source>
+    </stix:STIX_Header>
+    <stix:Observables cybox_major_version="2" cybox_minor_version="1" cybox_update_version="0">
+        <cybox:Observable id="VMRayAnalyzer:Observable-da6c68cb-e8f8-4481-a7df-d99b349e63cb">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-8cb53dc9-a839-40ab-a886-9537118dc42b">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                    <URIObj:Value>raw.githubusercontent.com</URIObj:Value>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Address-3b9f444f-dc77-4c9a-ac1d-c689db4d58da">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-989eb480-f8cb-49d0-819b-c656874cc4a1">
+            <cybox:Title>Address</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Address-3b9f444f-dc77-4c9a-ac1d-c689db4d58da">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                    <AddressObj:Address_Value>151.101.12.133</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-ea75da84-c520-44d0-98ae-bc9e87a95531">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-1ee3fe75-d34a-4a80-9e7b-d9edec318e0c">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                    <URIObj:Value>github.map.fastly.net</URIObj:Value>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Address-3b9f444f-dc77-4c9a-ac1d-c689db4d58da">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-0b020a1b-2ff2-43cc-99a8-effb38c62134">
+            <cybox:Title>URI</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:URI-92ea7660-8e3e-4f7c-abba-38db91d3594f">
+                <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                    <URIObj:Value>u667503srd.ha004.t.justns.ru</URIObj:Value>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Address-18d5ff32-88f5-4017-8644-eb4aa96579ef">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-56159fcc-56f6-4675-bd1f-873452938d6d">
+            <cybox:Title>Address</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Address-18d5ff32-88f5-4017-8644-eb4aa96579ef">
+                <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                    <AddressObj:Address_Value>185.22.155.62</AddressObj:Address_Value>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-d4455677-f616-445e-a380-d4e8ce18b9eb">
+            <cybox:Title>Process</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Process-4c3bb244-f6a4-4770-97ce-0d29753cd299">
+                <cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+                    <cyboxCommon:Custom_Properties>
+                        <cyboxCommon:Property name="monitored_id">1</cyboxCommon:Property>
+                    </cyboxCommon:Custom_Properties>
+                    <ProcessObj:PID>4452</ProcessObj:PID>
+                    <ProcessObj:Name>brjujs.exe</ProcessObj:Name>
+                    <ProcessObj:Parent_PID>1376</ProcessObj:Parent_PID>
+                    <ProcessObj:Image_Info>
+                        <ProcessObj:File_Name>brjujs.exe</ProcessObj:File_Name>
+                        <ProcessObj:Command_Line>"C:\Users\FD1HVy\Desktop\brjujs.exe" </ProcessObj:Command_Line>
+                        <ProcessObj:Current_Directory>C:\Users\FD1HVy\Desktop\</ProcessObj:Current_Directory>
+                        <ProcessObj:Path>c:\users\fd1hvy\desktop\brjujs.exe</ProcessObj:Path>
+                    </ProcessObj:Image_Info>
+                </cybox:Properties>
+                <cybox:Related_Objects>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Mutex-84a5bd85-ed82-4e70-bffe-3081a45a1293">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Created</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:Mutex-8834e865-0238-44bd-9169-570df7b1286d">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Created</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-ee105dca-cd3e-48a0-a7f1-cacd6c25c629">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-5f40d5b7-265e-464c-9be6-5bb21ce70434">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-e847ad5d-f30e-4c4d-bc17-76f3ea2b749e">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                    <cybox:Related_Object idref="VMRayAnalyzer:WinRegistryKey-8ab8e72f-cc39-43f0-8f54-d591a147bebf">
+                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+                    </cybox:Related_Object>
+                </cybox:Related_Objects>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-8ba37127-88a8-43f9-acd3-aae95ef81382">
+            <cybox:Title>Mutex</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Mutex-84a5bd85-ed82-4e70-bffe-3081a45a1293">
+                <cybox:Properties xsi:type="MutexObj:MutexObjectType" named="true">
+                    <MutexObj:Name>1668818982</MutexObj:Name>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-30d35409-5e2e-4ba1-8089-3111175f115d">
+            <cybox:Title>Mutex</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:Mutex-8834e865-0238-44bd-9169-570df7b1286d">
+                <cybox:Properties xsi:type="MutexObj:MutexObjectType" named="true">
+                    <MutexObj:Name>1668818982</MutexObj:Name>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-80f015bf-1ab3-4e0a-93c4-cb45c799ff2f">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-ee105dca-cd3e-48a0-a7f1-cacd6c25c629">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Mozilla\Mozilla Firefox</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-0143b08e-89fc-465c-b74b-1607d190662d">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-5f40d5b7-265e-464c-9be6-5bb21ce70434">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>Software\Valve\Steam</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_CURRENT_USER</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-d183371d-58aa-41b5-89a3-358887f53c80">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-e847ad5d-f30e-4c4d-bc17-76f3ea2b749e">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+        <cybox:Observable id="VMRayAnalyzer:Observable-5050ee59-88bd-4b6d-b31c-6134aa1a7b3a">
+            <cybox:Title>WinRegistryKey</cybox:Title>
+            <cybox:Object id="VMRayAnalyzer:WinRegistryKey-8ab8e72f-cc39-43f0-8f54-d591a147bebf">
+                <cybox:Properties xsi:type="WinRegistryKeyObj:WindowsRegistryKeyObjectType">
+                    <WinRegistryKeyObj:Key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</WinRegistryKeyObj:Key>
+                    <WinRegistryKeyObj:Hive>HKEY_LOCAL_MACHINE</WinRegistryKeyObj:Hive>
+                    <WinRegistryKeyObj:Values>
+                        <WinRegistryKeyObj:Value>
+                            <WinRegistryKeyObj:Name>ProductName</WinRegistryKeyObj:Name>
+                        </WinRegistryKeyObj:Value>
+                    </WinRegistryKeyObj:Values>
+                </cybox:Properties>
+            </cybox:Object>
+        </cybox:Observable>
+    </stix:Observables>
+    <stix:Indicators>
+        <stix:Indicator id="VMRayAnalyzer:indicator-57aba8c3-13be-43aa-988d-a8b92fcd4f63" timestamp="2020-06-11T13:10:48.525216+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Analyzed Sample #1004415</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Malware Artifacts</indicator:Type>
+            <indicator:Alternative_ID>1004415</indicator:Alternative_ID>
+            <indicator:Alternative_ID>Sample-ID: #1004415</indicator:Alternative_ID>
+            <indicator:Alternative_ID>Job-ID: #2809029</indicator:Alternative_ID>
+            <indicator:Short_Description>This sample was analyzed by VMRay Analyzer 3.2.2 on a Windows 10 Redstone 2 system</indicator:Short_Description>
+            <indicator:Observable id="VMRayAnalyzer:Observable-376e8792-22e2-4a15-8ca2-b22779efb87c">
+                <cybox:Observable_Composition operator="AND">
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-da6c68cb-e8f8-4481-a7df-d99b349e63cb">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-989eb480-f8cb-49d0-819b-c656874cc4a1">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-ea75da84-c520-44d0-98ae-bc9e87a95531">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-0b020a1b-2ff2-43cc-99a8-effb38c62134">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-56159fcc-56f6-4675-bd1f-873452938d6d">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-d4455677-f616-445e-a380-d4e8ce18b9eb">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-8ba37127-88a8-43f9-acd3-aae95ef81382">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-30d35409-5e2e-4ba1-8089-3111175f115d">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-80f015bf-1ab3-4e0a-93c4-cb45c799ff2f">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-0143b08e-89fc-465c-b74b-1607d190662d">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-d183371d-58aa-41b5-89a3-358887f53c80">
+                    </cybox:Observable>
+                    <cybox:Observable idref="VMRayAnalyzer:Observable-5050ee59-88bd-4b6d-b31c-6134aa1a7b3a">
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-22d44b9d-057f-42f8-a053-cf075481c774" timestamp="2020-06-11T13:10:48.532794+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-13bc5e0b-15d0-4534-bf5e-b63c13ff265a" timestamp="2020-06-11T13:10:48.534967+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-21bc62f4-b16b-4dce-90b6-b54073d5c2cc" timestamp="2020-06-11T13:10:48.535327+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-0d6bf86d-4cdb-4173-baf8-15a19a3db996" timestamp="2020-06-11T13:10:48.535781+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-6bc2609e-4373-4b07-8665-107fbd72036d" timestamp="2020-06-11T13:10:48.536101+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-6ca7ca8a-59a3-44bc-bbc4-1a477821c6eb" timestamp="2020-06-11T13:10:48.536402+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-f84437e3-e5bc-43b8-8783-abeae59df625" timestamp="2020-06-11T13:10:48.536691+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-5fd3371d-257f-4185-85eb-b5f2baf5f09d" timestamp="2020-06-11T13:10:48.536975+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-5f4ac7ac-b333-4f6b-a856-de94152c3ca9" timestamp="2020-06-11T13:10:48.537254+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-7212b637-db48-4384-9336-ea35d97dcda2" timestamp="2020-06-11T13:10:48.537577+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-0466c4d3-e27f-4bf4-8b1e-4a5cd29cae5a" timestamp="2020-06-11T13:10:48.538544+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-b271b90c-94f0-4254-91aa-18b7d96e6122" timestamp="2020-06-11T13:10:48.538853+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-0ea03c03-7857-49bf-bc4e-d4112ae45b21" timestamp="2020-06-11T13:10:48.539326+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-152d9bd2-1e28-4dbf-af96-867ed4b846b5" timestamp="2020-06-11T13:10:48.539630+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-836d8ca3-fb0a-4572-a318-fbdd4cef04b7" timestamp="2020-06-11T13:10:48.539921+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-75304864-cee8-4d1b-9bc6-5a47560d6493" timestamp="2020-06-11T13:10:48.540299+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Indicated_TTP>
+                <stixCommon:TTP idref="VMRayAnalyzer:ttp-2d2c5133-0230-462f-bce9-b533b771377c" timestamp="2020-06-11T13:10:48.540590+00:00" xsi:type='ttp:TTPType'/>
+            </indicator:Indicated_TTP>
+            <indicator:Likely_Impact timestamp="2020-06-11T13:10:48.540873+00:00">
+                <stixCommon:Value>100</stixCommon:Value>
+                <stixCommon:Description>VTI Score based on VTI Database Version 3.6</stixCommon:Description>
+            </indicator:Likely_Impact>
+            <indicator:Related_Indicators>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator id="VMRayAnalyzer:indicator-8bd89659-5142-46ed-acde-dc6133c6f758" timestamp="2020-06-11T13:10:48.531545+00:00" xsi:type='indicator:IndicatorType'>
+                        <indicator:Title>Metadata of Sample File #1004415</indicator:Title>
+                        <indicator:Alternative_ID>Submission-ID: #4520541</indicator:Alternative_ID>
+                        <indicator:Observable id="VMRayAnalyzer:Observable-c545647d-c0d0-47b1-b9f7-0976a392ef12">
+                            <cybox:Object id="VMRayAnalyzer:File-27bff4ac-be8d-4847-a14e-c7f1ff0ee4f3">
+                                <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                    <FileObj:File_Name>49a56e067a73bb6f553b8df8a354d3b3328b8fffb64a459a1e719d86df89a322exe</FileObj:File_Name>
+                                    <FileObj:File_Extension/>
+                                    <FileObj:Hashes>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>MD5</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>70e863fb5753b95b4bb7d8c746ae4b94</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>SHA1</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>40bdba0699a9e2b003f929717c14b5b3966ff9f4</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                        <cyboxCommon:Hash>
+                                            <cyboxCommon:Type>SHA256</cyboxCommon:Type>
+                                            <cyboxCommon:Simple_Hash_Value>49a56e067a73bb6f553b8df8a354d3b3328b8fffb64a459a1e719d86df89a322</cyboxCommon:Simple_Hash_Value>
+                                        </cyboxCommon:Hash>
+                                    </FileObj:Hashes>
+                                </cybox:Properties>
+                                <cybox:Related_Objects>
+                                    <cybox:Related_Object idref="VMRayAnalyzer:Process-4c3bb244-f6a4-4770-97ce-0d29753cd299">
+                                        <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened_By</cybox:Relationship>
+                                    </cybox:Related_Object>
+                                </cybox:Related_Objects>
+                            </cybox:Object>
+                        </indicator:Observable>
+                    </stixCommon:Indicator>
+                </indicator:Related_Indicator>
+                <indicator:Related_Indicator>
+                    <stixCommon:Indicator id="VMRayAnalyzer:indicator-2f71171c-ef25-4490-8ac7-750536a74b66" timestamp="2020-06-11T13:10:48.531887+00:00" xsi:type='indicator:IndicatorType'>
+                        <indicator:Title>Metadata of Analysis for Job-ID #2809029</indicator:Title>
+                        <indicator:Observable id="VMRayAnalyzer:Observable-23c8234e-3c02-4dd1-81f7-5fd9df87d6cb">
+                            <cybox:Object id="VMRayAnalyzer:Custom-d710b37e-b57d-4772-8826-5b6d9c46136e">
+                                <cybox:Properties xsi:type="CustomObj:CustomObjectType" custom_name="VMRayAnalyzer:AnalysisMetadataType">
+                                    <cyboxCommon:Custom_Properties>
+                                        <cyboxCommon:Property name="Cybox Truncated">False</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="Termination Reason">All processes terminated</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="Execution Successful">True</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Analysis Duration Time">93.206</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Computer Name">NQDPDE</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Name">win10_64_rs2</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Architecture">x86 64-bit</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM OS">Windows 10 Redstone 2</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Kernel Version">10.0.15063.540 (f6f48955-5489-4b24-b4df-942361f0730d)</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM Username">FD1HVy</cyboxCommon:Property>
+                                        <cyboxCommon:Property name="VM User Domain">NQDPDE</cyboxCommon:Property>
+                                    </cyboxCommon:Custom_Properties>
+                                    <CustomObj:Description>This is a property collection for additional information of VMRay analysis</CustomObj:Description>
+                                </cybox:Properties>
+                            </cybox:Object>
+                        </indicator:Observable>
+                    </stixCommon:Indicator>
+                </indicator:Related_Indicator>
+            </indicator:Related_Indicators>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>VMRay Analyzer</stixCommon:Name>
+                </stixCommon:Identity>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+    <stix:TTPs>
+        <stix:TTP id="VMRayAnalyzer:ttp-22d44b9d-057f-42f8-a053-cf075481c774" timestamp="2020-06-11T13:10:48.532794+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Anti Analysis</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_detect_analyzer_sandbox_by_patched_sleep</ttp:Title>
+                        <ttp:Description>Possibly trying to detect analyzer sandbox by checking for patched sleep.</ttp:Description>
+                        <ttp:Short_Description>Tries to detect analyzer sandbox</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-13bc5e0b-15d0-4534-bf5e-b63c13ff265a" timestamp="2020-06-11T13:10:48.534967+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Mutex</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_create_named_mutex</ttp:Title>
+                        <ttp:Description>Creates mutex with name "1668818982".</ttp:Description>
+                        <ttp:Short_Description>Creates mutex</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-21bc62f4-b16b-4dce-90b6-b54073d5c2cc" timestamp="2020-06-11T13:10:48.535327+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Anti Analysis</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 2/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_detect_generic_vm_by_file</ttp:Title>
+                        <ttp:Description>Tries to detect "VirtualBox" via file "c:\windows\system32\vboxservice.exe".</ttp:Description>
+                        <ttp:Short_Description>Tries to detect virtual machine</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-0d6bf86d-4cdb-4173-baf8-15a19a3db996" timestamp="2020-06-11T13:10:48.535781+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Discovery</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_recon_app_data_by_registry</ttp:Title>
+                        <ttp:Description>Tries to gather information about application "Mozilla Firefox" by registry.</ttp:Description>
+                        <ttp:Short_Description>Possibly does reconnaissance</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-6bc2609e-4373-4b07-8665-107fbd72036d" timestamp="2020-06-11T13:10:48.536101+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Discovery</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_recon_app_data_by_file</ttp:Title>
+                        <ttp:Description>Tries to gather information about application "Mozilla Firefox" by file.</ttp:Description>
+                        <ttp:Short_Description>Possibly does reconnaissance</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-6ca7ca8a-59a3-44bc-bbc4-1a477821c6eb" timestamp="2020-06-11T13:10:48.536402+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Data Collection</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 2/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_read_other_app_creds_by_file</ttp:Title>
+                        <ttp:Description>Trying to read sensitive data of application "Pidgin" by file.</ttp:Description>
+                        <ttp:Short_Description>Reads sensitive application data</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-f84437e3-e5bc-43b8-8783-abeae59df625" timestamp="2020-06-11T13:10:48.536691+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Discovery</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_recon_app_data_by_file</ttp:Title>
+                        <ttp:Description>Tries to gather information about application "Pidgin" by file.</ttp:Description>
+                        <ttp:Short_Description>Possibly does reconnaissance</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-5fd3371d-257f-4185-85eb-b5f2baf5f09d" timestamp="2020-06-11T13:10:48.536975+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Data Collection</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 2/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_read_ftp_creds_by_file</ttp:Title>
+                        <ttp:Description>Trying to read sensitive data of ftp application "FileZilla" by file.</ttp:Description>
+                        <ttp:Short_Description>Reads sensitive ftp data</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-5f4ac7ac-b333-4f6b-a856-de94152c3ca9" timestamp="2020-06-11T13:10:48.537254+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Discovery</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_recon_app_data_by_file</ttp:Title>
+                        <ttp:Description>Tries to gather information about application "FileZilla" by file.</ttp:Description>
+                        <ttp:Short_Description>Possibly does reconnaissance</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-7212b637-db48-4384-9336-ea35d97dcda2" timestamp="2020-06-11T13:10:48.537577+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Data Collection</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 2/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_read_browser_creds_by_file</ttp:Title>
+                        <ttp:Description>Trying to read sensitive data of web browser "Google Chrome" by file.</ttp:Description>
+                        <ttp:Short_Description>Reads sensitive browser data</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-0466c4d3-e27f-4bf4-8b1e-4a5cd29cae5a" timestamp="2020-06-11T13:10:48.538544+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Discovery</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_recon_app_data_by_registry</ttp:Title>
+                        <ttp:Description>Tries to gather information about application "Steam" by registry.</ttp:Description>
+                        <ttp:Short_Description>Possibly does reconnaissance</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-b271b90c-94f0-4254-91aa-18b7d96e6122" timestamp="2020-06-11T13:10:48.538853+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Discovery</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 0/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_enumerate_processes</ttp:Title>
+                        <ttp:Description>Enumerates running processes.</ttp:Description>
+                        <ttp:Short_Description>Enumerates running processes</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-0ea03c03-7857-49bf-bc4e-d4112ae45b21" timestamp="2020-06-11T13:10:48.539326+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Data Collection</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 2/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_read_vaulted_ie_creds_by_api</ttp:Title>
+                        <ttp:Description>Trying to read credentials of web browser "Internet Explorer" by reading from the system's credential vault.</ttp:Description>
+                        <ttp:Short_Description>Reads sensitive browser data</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-152d9bd2-1e28-4dbf-af96-867ed4b846b5" timestamp="2020-06-11T13:10:48.539630+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Antivirus</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 5/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_av_malicious_match</ttp:Title>
+                        <ttp:Description>Local AV detected the sample itself as "Gen:Variant.Razy.680355".</ttp:Description>
+                        <ttp:Short_Description>Malicious content was detected by heuristic scan</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-836d8ca3-fb0a-4572-a318-fbdd4cef04b7" timestamp="2020-06-11T13:10:48.539921+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Network Connection</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_establish_http_connection</ttp:Title>
+                        <ttp:Description>URL "raw.githubusercontent.com/fkarelli/fjrusbftnf/master/nyun.txt".</ttp:Description>
+                        <ttp:Short_Description>Connects to HTTP server</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-75304864-cee8-4d1b-9bc6-5a47560d6493" timestamp="2020-06-11T13:10:48.540299+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Network Connection</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 1/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_establish_http_connection</ttp:Title>
+                        <ttp:Description>URL "u667503srd.ha004.t.justns.ru/collect.php".</ttp:Description>
+                        <ttp:Short_Description>Connects to HTTP server</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+        <stix:TTP id="VMRayAnalyzer:ttp-2d2c5133-0230-462f-bce9-b533b771377c" timestamp="2020-06-11T13:10:48.540590+00:00" xsi:type='ttp:TTPType'>
+            <ttp:Title>Data Collection</ttp:Title>
+            <ttp:Description>VTI rule match with VTI rule score 4/5</ttp:Description>
+            <ttp:Behavior>
+                <ttp:Attack_Patterns>
+                    <ttp:Attack_Pattern>
+                        <ttp:Title>vmray_meta_classify_spyware_for_excessive_infosteal</ttp:Title>
+                        <ttp:Description>Tries to read sensitive data of: FileZilla, Google Chrome, Internet Explorer, Pidgin.</ttp:Description>
+                        <ttp:Short_Description>Exhibits Spyware behavior</ttp:Short_Description>
+                    </ttp:Attack_Pattern>
+                </ttp:Attack_Patterns>
+            </ttp:Behavior>
+        </stix:TTP>
+    </stix:TTPs>
+</stix:STIX_Package>

@@ -1,0 +1,88 @@
+﻿,file_name,num_PID,PID,Parent PID,Property,RelationShip,Path,Protocol,Address
+0,04ad737a6336.xml,277,powershell.exe,70,139.9963899,Created,c:\windows\system32\cscript.exe,null,212.73.150.207
+1,068ee14069f2.xml,11,cmd.exe,7,6.545454545,Child_Of,,null,128.127.106.29
+2,08fc0df9273e.xml,12,vbc.exe,9,12,Child_Of,c:\program files\microsoft office\root\office16\winword.exe,null,103.74.123.3
+3,1f8feaadbc49.xml,55,cmd.exe,33,29.74545455,Child_Of,c:\windows\syswow64\net.exe,null,null
+4,2019-snatch-ransomware.xml,21,vssadmin.exe,4,11,nan,c:\windows\syswow64\shutdown.exe,null,null
+5,233767c999cb.xml,1,233767c999cb351c19f993039552a3be754cc0bb87304ab50b74433015b08316.exe,1,1,Wrote_To,,null,null
+6,263cf261a45e.xml,6,86976.exe,5,7.166666667,Child_Of,,null,156.67.210.210
+7,2c5729e17b64.xml,6,cmd_.exe,6,3.5,Child_Of,,null,217.182.53.69
+8,303ad8c115d9.xml,11,cmd.exe,7,13.09090909,Child_Of,,null,50.87.144.227
+9,329b3ddbf1c0.xml,2,rlxsbp.exe,2,1.5,Child_Of,c:\users\ciihmnxmn6ps\desktop\rlxsbp.exe,null,185.52.2.154
+10,32f7a9e9e50f.xml,24,svchost.exe,10,13.52,nan,c:\program files\microsoft office\root\office16\winword.exe,TCP,147.75.40.2
+11,3692f99b7666.xml,25,cmd.exe,20,14.84,Child_Of,,null,null
+12,43e67197f480.xml,2,svhost.exe,2,1.5,Moved,,null,151.101.12.133
+13,49a56e067a73.xml,1,brjujs.exe,1,1,Created,c:\windows\system32\cmd.exe,null,null
+14,4b12f4fdf07d.xml,60,sc.exe,4,34,nan,,null,213.180.204.38
+15,4e38fd97f1d6.xml,1,nrpswgral.exe,1,1,Opened,,null,104.28.15.54
+16,4ef2c020a2f4.xml,17,cmd.exe,13,12.88235294,Child_Of,c:\users\aetadzjz\desktop\sgm_20190527_desfuhohdt.exe,null,5.188.60.53
+17,53f7d917ad9e.xml,35,cmd.exe,13,24.28571429,Child_Of,,null,107.22.251.25
+18,540b64d8ff20.xml,11,sjfhjjskfsf.exe,8,8.272727273,Child_Of,,null,185.81.4.56
+19,5d4e22be32dc.xml,2,nqmdwcixbxs.exe,2,1.5,Child_Of,c:\windows\syswow64\explorer.exe,null,null
+20,634ad02fba53.xml,22,urkotu.exe,3,11.5,nan,,null,104.26.5.15
+21,695e211d206e.xml,55,net.exe,25,39.11864407,nan,c:\users\5p5nrg~1\appdata\local\temp\hsbftstclaogdeeotf.exe,null,null
+22,6d365f7901cd.xml,6,hsbftstclaogdeeotf.exe,5,3.5,Child_Of,c:\users\5p5nrgjn0js halpmcxz\desktop\1.exe,null,185.252.213.161
+23,6e4cc242e9b4.xml,3,1.exe,3,2.666666667,Child_Of,c:\windows\explorer.exe,null,null
+24,72cca77c3813.xml,24,mfo4ed9hfrpsso4o.exe,4,17.91666667,nan,,TCP,192.185.73.158
+25,7ea94da41974.xml,12,fsk.exe,9,7.833333333,Child_Of,,null,62.204.93.18
+26,81f1a5faaa79.xml,10,aeroroyale.exe,8,5.8,Child_Of,c:\windows\syswow64\sc.exe,null,null
+27,8af0d99cef6f.xml,38,sc.exe,7,20.15789474,nan,c:\users\eebsym5\desktop\3838612080743901967.exe,TCP,192.95.7.159
+28,8de41ace64ef.xml,3,3838612080743901967.exe,3,2,Child_Of,,null,5.101.152.252
+29,93986d4e88a8.xml,1,globalhack[rueunavn][17.02.2019] .exe,1,1,Read_From,c:\windows\system32\taskkill.exe,null,null
+30,9b86a50b36ae.xml,550,net.exe,310,420.4321729,Child_Of,c:\windows\system32\svchost.exe,TCP,null
+31,a14e514ddfc3.xml,25,cmd.exe,20,15.4,Child_Of,,null,null
+32,a703dc8819dc.xml,2,cmd.exe,2,2,Child_Of,c:\program files\microsoft office\root\office16\winword.exe,null,185.104.29.52
+33,b2946daf21b5.xml,15,explorer.exe,10,17.06666667,Child_Of,c:\windows\system32\cmd.exe,null,35.196.254.156
+34,b365a249a15c.xml,60,userinit.exe,8,34.63934426,Created,c:\windows\syswow64\cmd.exe,TCP,null
+35,bad-rabbit-ransomware-flash-analysis.xml,67,cmd.exe,30,34.5,nan,,null,104.31.11.172
+36,blackruby-ransomware.xml,3,svchost.exe,2,2,nan,c:\windows\system32\vssadmin.exe,null,null
+37,c2bd70495630.xml,34,svchost.exe,16,21.02941176,nan,,null,217.76.132.184
+38,cc4e6e42f735.xml,13,certmgr.exe,6,12.84615385,Opened,,null,13.32.218.187
+39,cobalt-strike-beacon-hta-analysis.xml,8,certutil.exe,7,5.5,Child_Of,c:\windows\system32\conhost.exe,null,null
+40,cryptowire-wanacry4-analysis.xml,84,wanacr~1.exe,43,43.5,Child_Of,c:\users\ciihmnxmn6ps\desktop\sample.exe,null,239.255.255.250
+41,d45dfa191469.xml,31,svchost.exe,10,16,nan,,null,52.29.192.136
+42,d77378dcc42b.xml,5,System,5,8.4,Child_Of,,null,172.217.21.196
+43,de4224eca5ac.xml,1,compito italiano.doc.exe,1,1,Opened,,null,207.204.50.27
+44,emotet-2019-09-16.xml,17,structsstructs.exe,16,12.05882353,Child_Of,,null,184.168.46.18
+45,emotet-trickbot-july-2018-analysis.xml,21,syncpack.exe,14,11.71428571,Child_Of,,null,176.10.125.81
+46,evasive-gootkit-banking-trojan.xml,9,smsvchost32.exe,7,8.1,Child_Of,,null,217.70.184.50
+47,evasive-guloader-cloudeye.xml,33,xeuovifzzc.exe,4,17.84848485,nan,c:\program files (x86)\microsoft office\office12\excel.exe,TCP,101.99.75.184
+48,excel-drops-malicious-payload-february-2018.xml,4,heidi.exe,4,2.5,Child_Of,,null,164.160.128.121
+49,excel-executes-powershell-key-logger-analysis.xml,6,aap6.exe,6,4.5,Child_Of,,null,213.164.242.16
+50,f664d5e8a470.xml,8,nslookup.exe,5,6.875,Child_Of,c:\users\ciihmn~1\appdata\local\temp\qealler\python\python.exe,null,null
+51,f7d2c4199f08.xml,3,7z_1782656819305099153278728304306.exe,2,3,Child_Of,,null,66.171.248.178
+52,gandcrab-ransomware-3-0-1-analysis.xml,10,nslookup.exe,5,10.1,Opened,,null,52.29.192.136
+53,gandcrab-ransomware-4-1-analysis.xml,2,jeremy witt's dental records.exe,2,1.5,Child_Of,c:\windows\system32\cmd.exe,null,null
+54,Globeimposter-Ransomware-analysis.xml,20,conhost.exe,13,11,Child_Of,,null,185.17.122.212
+55,grandsoft-exploit-kit-gandcrab-analysis.xml,8,cmd.exe,7,6.375,Child_Of,c:\users\ybz8bt~1\appdata\local\temp13684.exe,TCP,null
+56,gryphon-ransomware-analysis.xml,10,reg.exe,6,5.5,Child_Of,,null,192.185.76.89
+57,guloader-delivering-azorult.xml,6,fghvhghvgfdgfhchfg.exe,6,6.833333333,Child_Of,,null,null
+58,hancitor-malware.xml,19,cmd.exe,14,14.29032258,nan,c:\users\ciihmnxmn6ps\desktop\order ref ftp.exe,TCP,216.37.42.30
+59,hawkeye-order-ref-ftp.xml,3,vbc.exe,2,31,Opened,c:\users\fd1hvy\desktop\vinfk.exe,null,74.125.205.109
+60,hentai-oniichan-ransomware-berserker.xml,198,cmd.exe,112,127.5905512,Child_Of,,null,95.213.251.149
+61,iqy-file-flawedammyy-rat-analysis.xml,21,cmd.exe,12,8.666666667,Child_Of,,null,31.202.128.249
+62,iqy-powershell-malicious-exe.xml,9,cmd.exe,7,23,Wrote_To,c:\program files (x86)\adobe\reader 9.1.0\reader\acrord32.exe,TCP,219.118.71.141
+63,jaff-ransomware.xml,4,acrord32.exe,4,29.5,Child_Of,c:\users\ciihmnxmn6ps\desktop\muziko66.exe,null,109.60.97.243
+64,keylogger-packed-open-source-crypter.xml,48,svchost.exe,15,22.2745098,nan,c:\windows\system32\taskeng.exe,null,null
+65,locky-ransomware-lukitus-analysis.xml,11,dllhost.exe,8,14.18181818,nan,c:\program files\microsoft office\office15\winword.exe,TCP,127.0.0.1
+66,macro-less-word-doc-dde-analysis.xml,26,cmd.exe,18,8.076923077,Child_Of,c:\users\5p5nrgjn0js halpmcxz\appdata\local\temp\pst790mv.exe,null,null
+67,malicious-javascript-myob-attack-analysis.xml,5,dllhost.exe,4,15,nan,c:\program files\microsoft office\root\office16\winword.exe,TCP,108.163.227.35
+68,malicious-word-doc-nov-2017-analysis.xml,15,systeminfo.exe,11,8,Child_Of,c:\program files\java\jre1.8.0_92\bin\java.exe,TCP,127.0.0.1
+69,malware-uses-jar.xml,13,cmd.exe,10,14.38095238,nan,,null,94.138.205.138
+70,ms-access-email-drops-keylogger-analysis.xml,15,msiexec.exe,10,28.93333333,nan,c:\users\eebsym5\desktop\9c3648e343b57ebf1fb3fe567deceb0da3499989dd56d4e82dd8911c3adf239d.exe,TCP,185.62.188.68
+71,obfuscated-autoit-malware-analysis.xml,15,regsvcs.exe,9,5.333333333,Child_Of,,null,fe80:0000:0000:0000:5969:84a4:f9e2:1f2b
+72,obfuscated-jar-drops-adwind-rat-analysis.xml,35,cmd.exe,20,8.057142857,Child_Of,,null,null
+73,ordinypt-wiper.xml,1,ofgzdr.exe,1,18,Opened,c:\users\hjrd1k~1\appdata\local\temp\6b4.tmp,TCP,null
+74,petya-not-petya.xml,11,wevtutil.exe,5,25.27272727,Child_Of,c:\program files\microsoft office\office15\winword.exe,TCP,192.232.251.15
+75,rtf-doc-cve-2017-11882-analysis.xml,11,svchost.exe,8,39.27272727,nan,c:\program files\microsoft office\root\office16\winword.exe,TCP,185.211.244.133
+76,rtf-doc-cve-exploit-analysis.xml,12,mshta.exe,8,35.75,Child_Of,,TCP,null
+77,tdl4-rootkit.xml,29,svchost.exe,14,12.76666667,Opened,,null,185.255.55.29
+78,trickbot-2019-05-16.xml,47,cmd.exe,26,50.5,Opened,c:\windows\syswow64\cmd.exe,null,null
+79,unnam3d-ransomware.xml,9,cmd.exe,7,79,Child_Of,,TCP,144.217.74.156
+80,wannacry-ransomware.xml,79,@wanadecryptor@.exe,30,10.6626506,Child_Of,c:\program files\microsoft office\office15\winword.exe,TCP,93.185.102.11
+81,word-doc-context-aware-payload.xml,11,taskeng.exe,9,19,Child_Of,c:\users\atveyd~1\appdata\local\temp\38763.exe,TCP,null
+82,word-doc-downloads-emotet.xml,11,viewcom.exe,8,30,Child_Of,,null,208.67.222.222
+83,wsf-payload-server-accept-connections-analysis.xml,22,cmd.exe,14,46.5,Child_Of,c:\windows\syswow64\cmd.exe,null,null
+84,XZZX-cryptomix-ransomware-analysis.xml,25,cmd.exe,13,70,Child_Of,c:\users\5p5nrgjn0js halpmcxz\desktop\soy.exe,null,null
+85,zerocleare-1.xml,101,svchost.exe,11,,nan,c:\windows\syswow64\cmd.exe,null,null
+86,zeus-panda-banking-trojan-analysis.xml,26,svchost.exe,15,,nan,c:\users\5p5nrgjn0js halpmcxz\desktop\lef9nvbny3gqm5dx.exe,TCP,172.217.23.142
