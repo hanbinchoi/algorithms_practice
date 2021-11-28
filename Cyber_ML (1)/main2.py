@@ -6,7 +6,7 @@ warnings.filterwarnings('ignore')
 
 data =pd.read_csv("cyber_data.csv")
 
-feature_list=["file_name","num_PID","Parent PID","PID","RelationShip","Path","Address","Protocol","Property","Port","UsedFile","family","hash_value"]
+feature_list=["num_PID","Property"]
 
 data=data.loc[:,feature_list]
 
@@ -14,9 +14,9 @@ data=data.loc[:,feature_list]
 #결측값 제거
 
 data["Property"]=data["Property"].fillna(0)
-data["RelationShip"]=data["RelationShip"].fillna("relation_empty")
-data["Path"]=data["Path"].fillna("Path_empty")
-data["Address"]=data["Address"].fillna("0.0.0.0")
+# data["RelationShip"]=data["RelationShip"].fillna("relation_empty")
+# data["Path"]=data["Path"].fillna("Path_empty")
+# data["Address"]=data["Address"].fillna("0.0.0.0")
 
 # Property, num_PID 정규화(추가 부분)
 def pid_normalization(x):
@@ -56,10 +56,12 @@ def prop_normalization(x):
         return 5
     else:
         return 0
-
+print(data.head())
+print()
 data["num_PID"] = data["num_PID"].apply(pid_normalization)
 data["Property"] = data["Property"].apply(prop_normalization)
-
+print("** After Normalization **")
+print(data.head())
 #item set
 itemset_size = len(data)
 itemset_feature =["num_PID","Parent PID","PID","Path","RelationShip","Address","Protocol","Property","Port","UsedFile","family","hash_value"]
@@ -127,7 +129,7 @@ df = pd.DataFrame(te_ary, columns=te.columns_)
 
 from mlxtend.frequent_patterns import fpgrowth
 
-fpgrowth_result=fpgrowth(df, min_support=0.2, use_colnames=True)
+fpgrowth_result=fpgrowth(df, min_support=0.3, use_colnames=True)
 
 print("Result FP-growth")
 print(fpgrowth_result)
