@@ -6,7 +6,7 @@ warnings.filterwarnings('ignore')
 
 data =pd.read_csv("cyber_data.csv")
 
-feature_list=["num_PID","Property"]
+feature_list=["file_name","num_PID","Parent PID","PID","RelationShip","Path","Address","Protocol","Property","Port","UsedFile","family","hash_value"]
 
 data=data.loc[:,feature_list]
 
@@ -14,9 +14,9 @@ data=data.loc[:,feature_list]
 #결측값 제거
 
 data["Property"]=data["Property"].fillna(0)
-# data["RelationShip"]=data["RelationShip"].fillna("relation_empty")
-# data["Path"]=data["Path"].fillna("Path_empty")
-# data["Address"]=data["Address"].fillna("0.0.0.0")
+data["RelationShip"]=data["RelationShip"].fillna("relation_empty")
+data["Path"]=data["Path"].fillna("Path_empty")
+data["Address"]=data["Address"].fillna("0.0.0.0")
 
 # Property, num_PID 정규화(추가 부분)
 def pid_normalization(x):
